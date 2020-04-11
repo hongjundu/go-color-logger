@@ -15,8 +15,8 @@ var (
 )
 
 func Init(logFileName string, logFileDir string, maxLogFileSize, maxLogFileBackups, maxLogFileAge int) {
-	stdLoggerName := fmt.Sprintf("%s-std", logFileName)
-	errLoggerName := fmt.Sprintf("%s-err", logFileName)
+	stdLoggerName := fmt.Sprintf("std", logFileName)
+	errLoggerName := fmt.Sprintf("err", logFileName)
 
 	// Init default logger
 	stdLogger = log.NewLogger(os.Stdout, stdLoggerName)
